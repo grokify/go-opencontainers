@@ -13,8 +13,10 @@ import (
 	v1 "github.com/opencontainers/image-spec/specs-go/v1"
 )
 
-func NewImageIndexFromTable(t *table.Table) (v1.Index, error) {
-	index := v1.Index{
+type Index v1.Index
+
+func NewImageIndexFromTable(t *table.Table) (Index, error) {
+	index := Index{
 		Versioned: specs.Versioned{
 			SchemaVersion: 2,
 		},
@@ -32,7 +34,11 @@ func NewImageIndexFromTable(t *table.Table) (v1.Index, error) {
 	return index, nil
 }
 
-func WriteJSON(filename string, idx v1.Index, prefix, indent string, perm os.FileMode) error {
+func (idx Index) ManifestDescriptors() manifest.Descriptors {
+	return manifest.Descriptors(idx.Manifests)
+}
+
+func (idx Index) WriteFileJSON(filename string, prefix, indent string, perm os.FileMode) error {
 	if b, err := jsonutil.MarshalSimple(idx, prefix, indent); err != nil {
 		return err
 	} else {
