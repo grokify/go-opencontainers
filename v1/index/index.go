@@ -15,14 +15,16 @@ import (
 
 type Index v1.Index
 
+func NewIndex() Index {
+	return Index{
+		Versioned:   specs.Versioned{SchemaVersion: 2},
+		MediaType:   v1.MediaTypeImageIndex,
+		Manifests:   []v1.Descriptor{},
+		Annotations: map[string]string{}}
+}
+
 func NewImageIndexFromTable(t *table.Table) (Index, error) {
-	index := Index{
-		Versioned: specs.Versioned{
-			SchemaVersion: 2,
-		},
-		MediaType: v1.MediaTypeImageIndex,
-		Manifests: []v1.Descriptor{},
-	}
+	index := NewIndex()
 
 	for _, r := range t.Rows {
 		if m, err := manifest.NewDescriptorFromTableRow(t.Columns, r); err != nil {
