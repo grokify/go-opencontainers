@@ -1,15 +1,15 @@
-module github.com/grokify/goopencontainers
+module github.com/grokify/go-opencontainers
 
 go 1.24.1
 
 require (
 	github.com/grokify/gocharts/v2 v2.22.6
+	github.com/grokify/mogo v0.68.3
 	github.com/opencontainers/go-digest v1.0.0
 	github.com/opencontainers/image-spec v1.1.1
 )
 
 require (
-	github.com/grokify/mogo v0.68.3 // indirect
 	github.com/huandu/xstrings v1.5.0 // indirect
 	github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826 // indirect
 	github.com/richardlehane/mscfb v1.0.4 // indirect

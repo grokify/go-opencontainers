@@ -6,8 +6,8 @@ package index
 import (
 	"os"
 
+	"github.com/grokify/go-opencontainers/v1/manifest"
 	"github.com/grokify/gocharts/v2/data/table"
-	"github.com/grokify/goopencontainers/v1/manifest"
 	"github.com/grokify/mogo/encoding/jsonutil"
 	specs "github.com/opencontainers/image-spec/specs-go"
 	v1 "github.com/opencontainers/image-spec/specs-go/v1"
