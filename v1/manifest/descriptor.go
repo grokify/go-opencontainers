@@ -35,6 +35,10 @@ func (e *DescriptorEdit) init() {
 	}
 }
 
+func (e *DescriptorEdit) Digest() digest.Digest {
+	return e.Descriptor.Digest
+}
+
 func (e *DescriptorEdit) UpsertDigest(v string) {
 	if v == "" {
 		return
@@ -45,6 +49,16 @@ func (e *DescriptorEdit) UpsertDigest(v string) {
 
 func (e *DescriptorEdit) UpsertSize(v int64) {
 	e.Descriptor.Size = v
+}
+
+func (e *DescriptorEdit) Title() string {
+	if e.Descriptor.Annotations == nil {
+		return ""
+	} else if v, ok := e.Descriptor.Annotations[v1.AnnotationTitle]; !ok {
+		return ""
+	} else {
+		return v
+	}
 }
 
 func (e *DescriptorEdit) UpsertTitle(v string) {
