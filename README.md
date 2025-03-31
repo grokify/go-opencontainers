@@ -8,11 +8,17 @@
 
 Go files to assist with Open Container Initiative.
 
+This Go module is based on the following:
+
+1. [Open Container Initiative (OCI)](https://opencontainers.org/)
+1. [OCI Image Spec](https://github.com/opencontainers/image-spec)
+1. [OCI Go SDK](https://pkg.go.dev/github.com/opencontainers/image-spec/specs-go/v1)
+
  [used-by-svg]: https://sourcegraph.com/github.com/grokify/goopencontainers/-/badge.svg
  [used-by-url]: https://sourcegraph.com/github.com/grokify/goopencontainers?badge
- [build-status-svg]: https://github.com/grokify/goopencontainers/actions/workflows/ci.yaml/badge.svg?branch=master
+ [build-status-svg]: https://github.com/grokify/goopencontainers/actions/workflows/ci.yaml/badge.svg?branch=main
  [build-status-url]: https://github.com/grokify/goopencontainers/actions/workflows/ci.yaml
- [lint-status-svg]: https://github.com/grokify/goopencontainers/actions/workflows/lint.yaml/badge.svg?branch=master
+ [lint-status-svg]: https://github.com/grokify/goopencontainers/actions/workflows/lint.yaml/badge.svg?branch=main
  [lint-status-url]: https://github.com/grokify/goopencontainers/actions/workflows/lint.yaml
  [goreport-svg]: https://goreportcard.com/badge/github.com/grokify/goopencontainers
  [goreport-url]: https://goreportcard.com/report/github.com/grokify/goopencontainers
