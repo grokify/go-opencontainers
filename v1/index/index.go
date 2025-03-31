@@ -1,4 +1,4 @@
-// manifest provides utilities for managing Open Container Initiative image manifests
+// index provides utilities for managing Open Container Initiative image indexes
 // described here: https://github.com/opencontainers/image-spec/blob/main/image-index.md and
 // here: https://pkg.go.dev/github.com/opencontainers/image-spec@v1.1.1/specs-go/v1#Index .
 package index
