@@ -1,10 +1,9 @@
 module github.com/grokify/go-opencontainers
 
 go 1.24.1
-
 require (
 	github.com/grokify/gocharts/v2 v2.22.6
-	github.com/grokify/mogo v0.68.3
+	github.com/grokify/mogo v0.68.4
 	github.com/opencontainers/go-digest v1.0.0
 	github.com/opencontainers/image-spec v1.1.1
 )
@@ -22,6 +21,6 @@ require (
 	golang.org/x/crypto v0.36.0 // indirect
 	golang.org/x/exp v0.0.0-20250305212735-054e65f0b394 // indirect
 	golang.org/x/image v0.25.0 // indirect
-	golang.org/x/net v0.37.0 // indirect
+	golang.org/x/net v0.38.0 // indirect
 	golang.org/x/text v0.23.0 // indirect
 )
